@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>bonitorooms</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="img/favicon.ico" rel="shortcut icon"> 
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row top">
+			<div class="container">
+				<div class="navbar-brand logo"><a href="index.html">BONITO<span>ROOMS</span></a></div>
+				<div class="pull-right">
+					<ul class="navbar-nav list-inline log">
+						<li class="log1"><a href="#" class="mod"  data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-in"></i> Login</a></li>
+						<li><a href="listhotal.html" class="btn btn-info top-bt">Add Your Hotel <i class="fa fa-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<nav class="navbar navbar-default">
+				<div class="container"> 
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button> 
+					</div> 
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html"><i class="fa fa-home"></i></a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html" >About Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
+							<li class="active"><a href="#" class="mod" data-toggle="modal" data-target="#search">Search <i class="fa fa-search"></i> </a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="row">
+			<div class="banner text-center">
+        <div class="overlay-bx">
+          <ul class="list-inline star-ico">
+            <li><i class="fa fa-star"></i></li>
+            <li class="star"><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+          </ul>
+          <h1>Stay Hourly, Pay Hourly!</h1>
+        <div class="bor"></div>
+        <p class="colo">Bonitorooms - Brings Short Stay Hourly Hotels in India</p>
+        <br>
+        <br>
+        <a href="#" class="btn btn-success bt"  data-toggle="modal" data-target="#search">Search <i class="fa fa-search"></i> </a>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+          <a href="#" class="btn btn-success bt1"><i class="fa fa-angle-double-down ico"></i></a>
+        </div>
+        </div>
+			</div>
+		</div>
+		<div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog mod1" role="document">
+				<div class="modal-content"> 
+					<div class="modal-body">
+					<div class="row">
+						<form action="index_submit" method="get" accept-charset="utf-8">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<p>DESTINATION OR HOTEL NAME</p> 
+								<span class="map"><i class="fa fa-map-marker"></i></span>
+								<input type="text" class="form-control fom" placeholder="Location">
+								<span class="map1"><i class="fa fa-dot-circle-o"></i></span>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="col-lg-5">
+								<div class="form-group">
+								<p>DATE IN-OUT</p> 
+								<span class="map"><i class="fa fa-calendar"></i>  </span>
+									<input type="text" id="datepicker" class="form-control fom" placeholder="Location"  data-date-format="mm-dd-yyyy">
+									<span class="map1"><i class="fa fa-angle-down"></i> </span>
+								</div> 
+							</div> 
+							<div class="col-lg-5">
+								<div class="form-group">
+									<p>SLOT</p> 
+									<span class="map"><i class="fa fa-align-justify"></i></span> 
+									<select  class="form-control fom">
+										<option value="1">3 Hrs</option>
+                                        <option value="2">6 Hrs</option>
+                                        <option value="3">9 Hrs</option>
+                                        <option value="5">12 Hrs</option>
+                                        <option value="4">24 Hrs</option>
+									</select>  
+								</div>  
+							</div>
+							<div class="col-lg-2">
+								<br>
+								<p></p>
+								<a href="#" class="btn btn-primary bt">Search <i class="fa fa-search"></i></a>
+							</div>
+						</div> 
+						</form>
+					</div> 
+					 
+<div class="row"> 
+                        <div class="col-sm-12 col-xs-12" id="CommonSearch">
+                                    <div class="header-search-input-item fl-wrap" id="SearchBox1" style="margin-top:4px;">
+                                        <div class="quantity-item" style="width:auto !important">
+                                            <label>Rooms</label>
+                                            <div class="quantity roomcopy">
+                                                <input class="roomsQua" readonly type="number" min="1" max="5" step="1" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="quantity-item" style="width:auto !important">
+                                            <label>Adults</label>
+                                            <div class="quantity">
+                                                <input type="number" data-id="adults" readonly min="1" max="3" step="1" value="2">
+                                            </div>
+                                        </div>
+                                        <div class="quantity-item" style="width:auto !important">
+                                            <label>Children</label>
+                                            <div class="quantity">
+                                                <input class="childQua" readonly type="number" min="0" max="2" step="1" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                  
+                    </div>
+					</div>
+				</div>
+				<div class="pop-bx text-center">
+					<a href="#" class="btn btn-info pop" data-dismiss="modal"><i class="fa fa-angle-double-down ico"></i></a> 
+				</div> 
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content"> 
+					<div class="close-reg color-bg"><span data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span></div>
+					<div id="exTab1">	
+						<ul  class="nav nav-pills">
+							<li class="active">
+							<a  href="#1a" data-toggle="tab"><i class="fa fa-sign-in"></i> Login</a></li>
+							<li><a href="#2a" data-toggle="tab"><i class="fa fa-user-plus"></i> Register</a></li> 
+						</ul>
+
+									<div class="tab-content clearfix">
+									  <div class="tab-pane active" id="1a">
+										<h3>Sign In <span>Bonito<strong>Rooms</strong></span></h3>
+										<form action="index_submit" method="get" accept-charset="utf-8">
+											 <div class="form-group">
+											 	<label> Username or Email Address <span>*</span> </label>
+											 	<input name="email" type="text" class="form-control fom" placeholder="Username">
+											 	<span class="map2"><i class="fa fa-envelope-o"></i> </span>
+											 </div>
+											 <div class="form-group">
+											 	<label>Password<span>*</span> </label>
+											 	<input name="Password" type="text" class="form-control fom" placeholder="Password">
+											 	<span class="map2"><i class="fa fa-lock"></i> </span>
+											 </div>
+											 <div class="form-group text-center">
+											 <a href="#" class="btn btn-info bt3">Log In</a>
+											</div>
+											 <div>
+												<div class="filter-tags pull-left">
+													<input id="check-a" type="checkbox" name="check">
+													<label for="check-a">Remember me</label>
+												</div>
+												<div class="lost_password pull-right">
+													<a href="#" class="Forgot-modal-open"  data-toggle="modal" data-target="#forget">Lost Your Password?</a>
+												</div>
+											 </div>
+										</form> 
+										
+										</div>  
+										<div class="tab-pane" id="2a">
+						         <h3>Sign Up <span>Bonito<strong>Rooms</strong></span></h3>
+						         <form action="index_submit" method="get" accept-charset="utf-8">
+						         	 <div class="form-group">
+						         	 	<label>Full Name <span>*</span></label>
+						         	 	<input type="text"  class="form-control fom" placeholder="Full Name">
+						         	 	<span class="map2"><i class="fa fa-user"></i> </span>
+						         	 </div>
+						         	 <div class="form-group">
+						         	 	<label>Email Address<span>*</span></label>
+						         	 	<input type="Email"  class="form-control fom" placeholder="Email Address">
+						         	 	<span class="map2"><i class="fa fa-envelope-o"></i> </span>
+						         	 </div>
+						         	 <div class="form-group">
+						         	 	<label>Mobile <span>*</span></label>
+						         	 	<input type="text"  class="form-control fom" placeholder="Mobile">
+						         	 	<span class="map2"><i class="fa fa-phone"></i> </span>
+						         	 </div>
+						         	 <div class="form-group">
+						         	 	<label>Password <span>*</span></label>
+						         	 	<input type="Password"  class="form-control fom" placeholder="Password">
+						         	 	<span class="map2"><i class="fa fa-lock"></i> </span>
+						         	 </div>
+						         	 <div class="form-group">
+						         	 	<label>Confirm Password  <span>*</span></label>
+						         	 	<input type="password"  class="form-control fom" placeholder="Confirm Password ">
+						         	 	<span class="map2"><i class="fa fa-lock"></i> </span>
+						         	 </div>
+						         	  
+						         	 <div class="form-group text-center">
+						         	 	<a href="#" class="btn btn-info bt">Register</a>
+						         	 </div>
+                                 	</form>
+                                 </div>
+						         </div> 
+						     </div>
+						 </div>
+						</div>
+					</div>
+					<div class="modal fade" id="forget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content"> 
+								<div class="modal-body">
+									<div class="tab-content clearfix">
+										<h3>Sign In <span>Bonito<strong>Rooms</strong></span></h3>
+										<form action="index_submit" method="get" accept-charset="utf-8">
+											 <div class="form-group">
+		                                        <label>Mobile or Email Address <span>*</span> </label>
+		                                        <input  type="text" class="form-control fom" placeholder="Mobile or Email Address" >
+		                                    </div>
+		                                    <div class="form-group">
+		                                    	<a href="#" class="btn btn-info bt3">Submit</a>
+		                                    	<a href="#" class="btn btn-info bt3 pull-right"  data-dismiss="modal" data-toggle="modal"  data-target="#myModal">Login</a>
+		                                    </div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		 
+
+
+    <div class="row">
+      <div class="container text-center mg">
+        <ul class="list-inline star-ico">
+          <li><i class="fa fa-star"></i></li>
+          <li class="star"><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+        </ul>
+        <h3 class="head">Popular Destination</h3>
+        <div class="bor"></div>
+        <p>Explore some of the best tips from around the city from our partners and friends.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container-fluid pd">
+        <div class="col-lg-4">
+          <div class="gallery">
+            <div class="listing-counter"><span>62 </span> Hotels</div>
+           <img src="img/Delhi.jpg" alt="Delhi" class="img-responsive">
+            <div class="add">
+              <h3>Delhi</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="gallery">
+            <div class="listing-counter"><span>62 </span> Hotels</div>
+            <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+            <div class="add">
+              <h3>Gurgaon</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="gallery">
+            <div class="listing-counter"><span>62 </span> Hotels</div>
+            <img src="img/Karnal.jpg" alt="Karnal" class="img-responsive">
+            <div class="add">
+              <h3>Karnal</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mg">
+        <div class="btn-group">
+          <a href="#" class="btn btn-success bt btnc">Explore All Cities</a>
+          <span class="btn-group">
+        <a class="btn btn-success bt2" type="button"><i class="fa fa-caret-right"></i></a>
+      </span>
+        </div>
+      </div>
+    </div>
+     <div class="row back mg pd1">
+      <div class="container text-center mg">
+        <ul class="list-inline star-ico">
+          <li><i class="fa fa-star"></i></li>
+          <li class="star"><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+        </ul>
+        <h3 class="head">Recently Added Hotels</h3>
+        <div class="bor"></div>
+        <p>Don't miss these great deals on hotels new to Bonitorooms.</p>
+      </div> 
+      <div class="container-fluid">
+        <div id="testimonial-slider" class="owl-carousel">
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel1.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel2.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel3.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel4.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel5.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel6.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel7.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel8.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel9.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel10.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel11.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel12.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel13.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial clearfix">
+                  <div class="pic">
+                    <div class="couple"><span>Couple Friendly</span></div>
+                    <img src="img/list-carousel14.jpg" alt="list-carousel" class="img-responsive">
+                    <div class="add1">
+                      <span class="pull-left">
+                        <ul class="star-ico1">
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </span>   
+                      <div class="pull-right">
+                        <div class="pull-left good">
+                          <h5>Very Good</h5>
+                          <p>102 Reviews </p>
+                        </div>
+                        <span class="sit">4.7</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 but">
+                    <div class="title-bx">
+                      <h3 class="title">Lorem ipsum dolor</h3>
+                      <p><i class="fa fa-map-marker"></i> Greater Kailash, New Delhi</p>
+                    </div>
+                    <h3 class="title-mp"><i class="fa fa-map-o"></i></h3>
+                  </div>
+                    <p class="description">  Telephone, restaurant, shower, meal, water bottle, led tv, parking nearby, television, air conditioning, free wifi internet</p>
+                    <div class="testimonial-content">
+                        <ul class="list-inline">
+                            <li tooltip="Free WiFi"><i class="fa fa-wifi"></i></li>
+                            <li tooltip="Parking"><i class="fa fa-product-hunt"></i></li>
+                            <li tooltip="Non-smoking Rooms"><i class="fa fa-ban"></i></li>
+                            <li tooltip="Restaurant"><i class="fa  fa-cutlery"></i></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-12 foot-bx">
+                      <div class="left-bx">
+                        <p>Avg/Night <span class="rat"><i class="fa fa-inr"></i> 999</span></p>
+                      </div>
+                      <div class="right-bx">
+                        <ul class="list-inline">
+                          <li tooltip="Find Directions"><a href="#"><i class="fa fa-exchange ico"></i></a></li>
+                          <li tooltip="Save"><a href="#"><i class="fa fa-heart-o ico"></i></a></li>
+                          <li tooltip="On the map"><a href="#"><i class="fa fa-map-marker ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hotels">
+            <div class="overlay-bx1">
+              <div class="container">
+                <div class="col-lg-3">
+                  <h3 class="colo"><strong>Most Popular Hotels</strong></h3>
+                  <p class="colo">Most popular hotels on bontiorooms getting maximum occupancies daily.</p>
+                  <div class="mg">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-success bt btnc">View All Hotels</a>
+                      <span class="btn-group">
+                      <a class="btn btn-success bt2" type="button"><i class="fa fa-caret-right"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div id="testimonial-slider1" class="owl-carousel">
+                    <div class="testimonial clearfix">
+                      <div class="gallery">
+                        <div class="listing-counter"><span>Avg/Night <i class="fa fa-inr"></i> 699</span></div>
+                        <div class="couple1"><span>Couple Friendly</span></div>
+                        <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+                        <div class="add2">
+                          <span class="pull-left">
+                            <ul class="star-ico2">
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                            </ul>
+                            <h4 class="colo">Hotel Kumar Palace</h4>
+                            <p class="colo"><i class="fa fa-map-marker"></i> Paharganj, New Delhi</p>
+                          </span>   
+                          <div class="pull-right  ma">
+                            <div class="pull-left good">
+                              <h5>Very Good</h5>
+                              <p>102 Reviews </p>
+                            </div>
+                            <span class="sit">4.7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial clearfix">
+                      <div class="gallery">
+                        <div class="listing-counter"><span>Avg/Night <i class="fa fa-inr"></i> 699</span></div>
+                        <div class="couple1"><span>Couple Friendly</span></div>
+                        <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+                        <div class="add2">
+                          <span class="pull-left">
+                            <ul class="star-ico2">
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                            </ul>
+                            <h4 class="colo">Hotel Kumar Palace</h4>
+                            <p class="colo p"><i class="fa fa-map-marker"></i> Paharganj, New Delhi</p>
+                          </span>   
+                          <div class="pull-right  ma">
+                            <div class="pull-left good">
+                              <h5>Very Good</h5>
+                              <p>102 Reviews </p>
+                            </div>
+                            <span class="sit">4.7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial clearfix">
+                      <div class="gallery">
+                        <div class="listing-counter"><span>Avg/Night <i class="fa fa-inr"></i> 699</span></div>
+                        <div class="couple1"><span>Couple Friendly</span></div>
+                        <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+                        <div class="add2">
+                          <span class="pull-left ">
+                            <ul class="star-ico2">
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                            </ul>
+                            <h4 class="colo">Hotel Kumar Palace</h4>
+                            <p class="colo p"><i class="fa fa-map-marker"></i> Paharganj, New Delhi</p>
+                          </span>   
+                          <div class="pull-right  ma">
+                            <div class="pull-left good">
+                              <h5>Very Good</h5>
+                              <p>102 Reviews </p>
+                            </div>
+                            <span class="sit">4.7</span>
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial clearfix">
+                      <div class="gallery">
+                        <div class="listing-counter"><span>Avg/Night <i class="fa fa-inr"></i> 699</span></div>
+                        <div class="couple1"><span>Couple Friendly</span></div>
+                        <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+                        <div class="add2">
+                          <span class="pull-left">
+                            <ul class="star-ico2">
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                            </ul>
+                            <h4 class="colo">Hotel Kumar Palace</h4>
+                            <p class="colo p"><i class="fa fa-map-marker"></i> Paharganj, New Delhi</p>
+                          </span>   
+                          <div class="pull-right ma">
+                            <div class="pull-left good">
+                              <h5>Very Good</h5>
+                              <p>102 Reviews </p>
+                            </div>
+                            <span class="sit">4.7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial clearfix">
+                      <div class="gallery">
+                        <div class="listing-counter"><span>Avg/Night <i class="fa fa-inr"></i> 699</span></div>
+                        <div class="couple1"><span>Couple Friendly</span></div>
+                        <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+                        <div class="add2">
+                          <span class="pull-left ">
+                            <ul class="star-ico2">
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                            </ul>
+                            <h4 class="colo">Hotel Kumar Palace</h4>
+                            <p class="colo p"><i class="fa fa-map-marker"></i> Paharganj, New Delhi</p>
+                          </span>   
+                          <div class="pull-right ma">
+                            <div class="pull-left good">
+                              <h5>Very Good</h5>
+                              <p>102 Reviews </p>
+                            </div>
+                            <span class="sit">4.7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial clearfix">
+                      <div class="gallery">
+                        <div class="listing-counter"><span>Avg/Night <i class="fa fa-inr"></i> 699</span></div>
+                        <div class="couple1"><span>Couple Friendly</span></div>
+                        <img src="img/Gurgaon.jpg" alt="Gurgaon" class="img-responsive">
+                        <div class="add2">
+                         <span class="pull-left ">
+                            <ul class="star-ico2">
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                              <li class="fa fa-star"></li>
+                            </ul>
+                            <h4 class="colo">Hotel Kumar Palace</h4>
+                            <p class="colo p"><i class="fa fa-map-marker"></i> Paharganj, New Delhi</p>
+                          </span>   
+                          <div class="pull-right ma">
+                            <div class="pull-left good">
+                              <h5>Very Good</h5>
+                              <p>102 Reviews </p>
+                            </div>
+                            <span class="sit">4.7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mg pd1">
+            <div class="container text-center">
+              <ul class="list-inline star-ico">
+                <li><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+              <h3 class="head">Why Choose Us</h3>
+              <div class="bor"></div>
+              <p>Bonito rooms is breaking this barrier through hourly booking hotel system. Bonito rooms is introducing the concept of booking a hotel for as much hours as needed (3hr,6hr,9hr,12hr or 24hr). This is the most beneficial facility for people looking for short stay, stay for a few hours, a days stay in a hotel. A major crowd in this category falls into the group of unmarried couples. Bonito rooms-Stay Hourly,Pay Hourly is also categorizing couple friendly hotels. Thus,providing facility of hourly stay for couples, hourly booking for couples and day use hotels for couples.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container pd1">
+            <div class="col-lg-4">
+              <div class="choose-bx">
+                <i class="fa fa-headphones choes-ico"></i>
+                <h3>Best service guarantee</h3>
+               <p>We will provide you best in class service in the hotel booings on hourly basis as well as daily basis.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="choose-bx">
+                <i class="fa fa-gift choes-ico"></i>
+                <h3>Exclusive gifts</h3>
+                <p>We will provide exclusive gifts to our frequent customers.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="choose-bx">
+                <i class="fa fa-credit-card-alt choes-ico"></i>
+                <h3>Digital as well cod payment</h3>
+                <p>We are providing both obline and offile payment methods.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mg app1">
+          <div class="app">
+            <div class="container pd pd1">
+	            <div class="col-lg-6">
+	              	<div class="available">
+		                <h3><strong>Our App Available Now</strong></h3>
+		                <p>One can use Bonito Rooms services through the website <a href="#">https://www.bonitorooms.com/</a>  or from app and book the hotel on hourly basis. This hourly hotel booking system enables the users to save money and pay only for the time they have utilized the hotel services. Bonito Rooms -StayHourly, Pay Hourly.</p>
+		                <a href="#" class="btn btn-primary bt3"><i class="fa fa-android"> Download for Android</i></a>
+		            </div>
+		        </div>
+              <div class="col-lg-6 ">
+                <div class="aap-bx">
+                    <img src="img/api.png" alt="api" class="img-responsive pull-right image">
+                    <div class="images-collage-title">Bonito<span class="ro">Rooms</span></div>
+                    <div class="cim_1 app-bx"><img src="img/app-ico.jpg" alt=""></div>
+                    <div class="cim_2 app-bx"><img src="img/app-ico1.jpg" alt=""></div>
+                    <div class="cim_3 app-bx"><img src="img/app-ico2.jpg" alt=""></div>
+                    <div class="col-input">Search <i class="fa fa-search"></i></div>
+                    <div class="bt btn-primary bt cim-bt">Booking now</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		<div class="row mg">
+            <div class="container text-center">
+              <ul class="list-inline star-ico">
+                <li><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+              <h3 class="head">Testimonials</h3>
+              <div class="bor"></div> 
+          </div>
+        </div>
+        <div class="row">
+        	<div class="container">
+        		<div id="testimonial-slider2" class="owl-carousel">
+                <div class="testimonial test-bx clearfix">
+                    <div class="pic1">
+                        <img src="img/default_avatar.png" alt="default_avatar" class="img-responsive">
+                    </div>
+                    <div class="testimol">
+                    	<ul class="list-inline star-ico2 pull-right">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					</ul>
+                    </div>
+                    <h3 class="testimonial-title">Mohit Sharma  - <span>Happy Client</span></h3>
+                    <p class="description testimol1">
+                    	<i class="fa fa-quote-left"></i>
+                         <i>"Bonitorooms doing great job in the line of hotel industry by providing hourly basis hotel rooms with different packages. It is also providing meal plans with 24 hrs and more bookings.</i>/<br><br>
+                         <span class="pull-left"><a href="#">Via Social Media</a></span><i class="fa fa-quote-right pull-right"></i>
+                    </p>
+                </div>
+ 				<div class="testimonial test-bx clearfix">
+                    <div class="pic1">
+                        <img src="img/default_avatar.png" alt="default_avatar" class="img-responsive">
+                    </div>
+                    <div class="testimol">
+                    	<ul class="list-inline star-ico2 pull-right">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					</ul>
+                    </div>
+                    <h3 class="testimonial-title">Mohit Sharma  - <span>Happy Client</span></h3>
+                    <p class="description testimol1">
+                    	<i class="fa fa-quote-left"></i>
+                         <i>"Bonitorooms doing great job in the line of hotel industry by providing hourly basis hotel rooms with different packages. It is also providing meal plans with 24 hrs and more bookings.</i><br><br>
+                         <span class="pull-left"><a href="#">Via Social Media</a></span><i class="fa fa-quote-right pull-right"></i>
+                    </p>
+                </div>
+                <div class="testimonial test-bx clearfix">
+                    <div class="pic1">
+                        <img src="img/default_avatar.png" alt="default_avatar" class="img-responsive">
+                    </div>
+                    <div class="testimol">
+                    	<ul class="list-inline star-ico2 pull-right">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					</ul>
+                    </div>
+                    <h3 class="testimonial-title">Mohit Sharma  - <span>Happy Client</span></h3>
+                    <p class="description testimol1">
+                    	<i class="fa fa-quote-left"></i>
+                         <i>"Bonitorooms doing great job in the line of hotel industry by providing hourly basis hotel rooms with different packages. It is also providing meal plans with 24 hrs and more bookings.</i><br><br>
+                         <span class="pull-left"><a href="#">Via Social Media</a></span><i class="fa fa-quote-right pull-right"></i>
+                    </p>
+                </div>
+                <div class="testimonial test-bx clearfix">
+                    <div class="pic1">
+                        <img src="img/default_avatar.png" alt="default_avatar" class="img-responsive">
+                    </div>
+                    <div class="testimol">
+                    	<ul class="list-inline star-ico2 pull-right">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					</ul>
+                    </div>
+                    <h3 class="testimonial-title">Mohit Sharma  - <span>Happy Client</span></h3>
+                    <p class="description testimol1">
+                    	<i class="fa fa-quote-left"></i>
+                         <i>"Bonitorooms doing great job in the line of hotel industry by providing hourly basis hotel rooms with different packages. It is also providing meal plans with 24 hrs and more bookings.</i><br><br>
+                         <span class="pull-left"><a href="#">Via Social Media</a></span><i class="fa fa-quote-right pull-right"></i>
+                    </p>
+                </div>
+                <div class="testimonial test-bx clearfix">
+                    <div class="pic1">
+                        <img src="img/default_avatar.png" alt="default_avatar" class="img-responsive">
+                    </div>
+                    <div class="testimol">
+                    	<ul class="list-inline star-ico2 pull-right">
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					<li><i class="fa fa-star"></i></li>
+					</ul>
+                    </div>
+                    <h3 class="testimonial-title">Mohit Sharma  - <span>Happy Client</span></h3>
+                    <p class="description testimol1">
+                    	<i class="fa fa-quote-left"></i>
+                         <i>"Bonitorooms doing great job in the line of hotel industry by providing hourly basis hotel rooms with different packages. It is also providing meal plans with 24 hrs and more bookings.</i><br><br>
+                         <span class="pull-left"><a href="#">Via Social Media</a></span><i class="fa fa-quote-right pull-right"></i>
+                    </p>
+                </div>
+            </div>
+        	</div>
+        </div>
+        <div class="row owner mg">
+            <div class="overlay-bx1">
+	        	<div class="container">
+	        		<h2 class="colo">The owner of the hotel or business ?</h2>
+	        		<p class="colo">List your hotel as early as possible with bonitorooms to increase the occupancy.</p>
+					<div class="mg">
+					<div class="btn-group">
+					<a href="#" class="btn btn-success bt btnc">Add your hotel</a>
+					<span class="btn-group">
+					<a class="btn btn-success bt2" type="button"><i class="fa fa-plus"></i></a>
+					</span>
+					</div>
+					</div>
+	        	</div>
+	        </div>
+        </div>
+        <div class="row mg">
+            <div class="container text-center">
+              <ul class="list-inline star-ico">
+                <li><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+              <h3 class="head">Tips & Articles</h3>
+              <div class="bor"></div> 
+              <p>Browse the latest articles from our blog.</p>
+          </div>
+        </div>
+        <div class="row mg">
+        	<div class="container">
+        		<div class="col-lg-4">
+        			<div class="BOOKING">
+        				<div class="bordr">
+        					<h3>HOURLY HOTEL BOOKING IN DELHI <i class="fa fa-caret-down pull-right"></i></h3>
+        				</div>
+        				<p>The use of technology is increasing day by day. The facilities available to people are also increasing at the same pace. Using contemporary technologies is helping companies incl. hotels fetch more sales and break new records. Hospitality industry is also in the list. The hospitality industry is now witnessing a revolution because of IT industry tech trends in Mobile Apps and Websites.</p>
+        			</div>
+        		</div>
+        		<div class="col-lg-4">
+        			<div class="BOOKING">
+        				<div class="bordr">
+        					<h3>BonitoRooms Changing the face of hospitality industry <i class="fa fa-caret-down pull-right"></i></h3>
+        				</div>
+        				<p>The use of technology is increasing day by day. The facilities available to people are also increasing at the same pace. Using contemporary technologies is helping companies incl. hotels fetch more sales and break new records. Hospitality industry is also in the list. The hospitality industry is now witnessing a revolution because of IT industry tech trends in Mobile Apps and Websites.</p>
+        			</div>
+        		</div>
+        		<div class="col-lg-4">
+        			<div class="BOOKING">
+        				<div class="bordr">
+        					<h3>Revolution hourly booking hotels for short stay <i class="fa fa-caret-down pull-right"></i></h3>
+        				</div>
+        				<p>The use of technology is increasing day by day. The facilities available to people are also increasing at the same pace. Using contemporary technologies is helping companies incl. hotels fetch more sales and break new records. Hospitality industry is also in the list. The hospitality industry is now witnessing a revolution because of IT industry tech trends in Mobile Apps and Websites.</p>
+        			</div>
+        		</div>
+        	</div> 
+    		<div class="text-center pattern">
+				<div class="btn-group avail">
+					<a href="#" class="btn btn-success bt btnc">Read All News</a>
+					<span class="btn-group">
+						<a class="btn btn-success bt2" type="button"><i class="fa fa-caret-right"></i></a>
+					</span>
+				</div>
+			</div> 
+        </div>
+        <div class="row wave-ovr">
+        	<div class="wave ">
+				<div class="container">
+					<div class="col-lg-6">
+						<h4 class="colo"><strong>Subscribe</strong></h4>
+						<p class="colo">Want to be notified when we introduce something new or discounts.Just sign up and we'll send you a notification by email.</p>
+					</div>
+					<div class="col-lg-6">
+						<form action="index_submit" method="get" accept-charset="utf-8">
+							<div class="form-bx">
+								<div class="input-group">
+									<input type="text" class="form-control fom" placeholder="Enter Your Email">
+									<span class="input-group-btn">
+									<button class=" btn btn-primary bt3" type="button"><i class="fa fa-wifi"></i> Subscribe</button>
+									</span>
+								</div>
+							</div>	
+						</form>
+					</div>
+				</div>
+        	</div>
+        </div>
+        <div class="row footer">
+        	<div class="footer-ovr">
+        		<div class="container">
+        			<div class="bordr">
+        				<h4 class="colo"><strong>ABOUT US</strong></h4>
+        			</div>
+        			<div class="but1">
+        				<p>One can use Bonito Rooms services through the website https://www.bonitorooms.com/ and book the hotel on hourly basis. This hourly hotel booking system enables the users to save money and pay only for the time they have utilized the hotel services. Bonito Rooms -StayHourly, Pay Hourly.</p>
+        			</div>
+        			<div class="but1">
+        				<ul class="mail">
+        					<li><a href="#"><i class="fa fa-envelope"></i> Mail:</a> pramod1993.pkb@gmail.com</li>
+        					<li><a href="#"><i class="fa fa-phone"></i> Phone:</a> +91 8076831741</li>
+        				</ul>
+        			</div>
+        			<div>
+        				<ul class="list-inline mail1">
+        					<li class="ps"><h4><strong>FIND US :</strong></h4></li>
+        					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        					<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+        				</ul>
+        			</div>
+        			<div class="contact pd1 clearfix">
+        				<div class="col-lg-4 mg">
+        					<a href="#" class="btn btn-success bt bt-bx">Get In Touch  <i class="fa fa-envelope ico"></i></a>
+        				</div>
+        				<div class="col-lg-8">
+        					<div class="customer-support-widget fl-wrap">
+                            <h4 class="colo">Customer support : </h4>
+                            <a href="#" class="cs-mumber">+919873456989</a>
+                            <a href="#" class="btn btn-primary bt cs-mumber-button">Call Now <i class="fa fa-volume-control-phone"></i></a>
+                        </div>
+        				</div>
+        			</div>
+        			<div class="ul-bx">
+        				<ul class="list-inline">
+                            <li><a href="/hotels-in-delhi">Hotels in Delhi</a></li>
+                            <li><a href="/delhi-Hotels">Delhi Hotels</a></li>
+                            <li><a href="/hotels-in-gurgaon">Hotels in Gurgaon</a></li>
+                            <li><a href="/gurgaon-Hotels">Gurgaon Hotels</a></li>
+                            <li><a href="/hotels-in-karnal">Hotels in Karnal</a></li>
+                            <li><a href="/karnal-Hotels">Karnal Hotels</a></li>
+                            <li><a href="/hotels-in-new-delhi">Hotels in New delhi</a></li>
+                            <li><a href="/new-delhi-Hotels">New delhi Hotels</a></li>
+                            <li><a href="/hotels-in-noida">Hotels in Noida</a></li>
+                            <li><a href="/noida-Hotels">Noida Hotels</a></li>
+                            <li><a href="/hotels-in-greater-noida">Hotels in Greater noida</a></li>
+                            <li><a href="/greater-noida-Hotels">Greater noida Hotels</a></li>
+                            <li><a href="/hotels-in-jaipur">Hotels in Jaipur</a></li>
+                            <li><a href="/jaipur-Hotels">Jaipur Hotels</a></li>
+                            <li><a href="/hotels-in-gorakhpur">Hotels in Gorakhpur</a></li>
+                            <li><a href="/gorakhpur-Hotels">Gorakhpur Hotels</a></li>
+                            <li><a href="/hotels-in-chennai">Hotels in Chennai</a></li>
+                            <li><a href="/chennai-Hotels">Chennai Hotels</a></li>
+                            <li><a href="/hotels-in-bangalore">Hotels in Bangalore</a></li>
+                            <li><a href="/bangalore-Hotels">Bangalore Hotels</a></li>
+                            <li><a href="/hotels-in-kaithal">Hotels in Kaithal</a></li>
+                            <li><a href="/kaithal-Hotels">Kaithal Hotels</a></li>
+                            <li><a href="/hotels-in-gurugram">Hotels in Gurugram</a></li>
+                            <li><a href="/gurugram-Hotels">Gurugram Hotels</a></li>
+                            <li><a href="/hotels-in-haridwar">Hotels in Haridwar</a></li>
+                            <li><a href="/haridwar-Hotels">Haridwar Hotels</a></li>
+                            <li><a href="/hotels-in-mahipalpur">Hotels in Mahipalpur</a></li>
+                            <li><a href="/mahipalpur-Hotels">Mahipalpur Hotels</a></li>
+                            <li><a href="/hotels-in-murthal">Hotels in Murthal</a></li>
+                            <li><a href="/murthal-Hotels">Murthal Hotels</a></li>
+
+                </ul>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="footer-bottom">
+        		<div class="container">
+        			<p class="pull-left">© Bonitorooms 2018 . All rights reserved.</p>
+        			<ul class="list-inline pull-right">
+        				<li><a href="#">Privacy</a></li>
+        				<li><a href="#">PolicyFAQS</a></li>
+        				<li><a href="#">Blog</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>  
+<script src="js/common.js"></script>    
+<script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/SearchCity.js"></script> 
+    <script type="text/javascript" src="js/map-single.js"></script>   
+<script src="js/Common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:4,
+        itemsDesktop:[1000,2],
+        itemsDesktopSmall:[979,2],
+        itemsTablet:[768,2],
+        itemsMobile:[650,1],
+        pagination:false,
+        navigation:true,
+        navigationText:["",""],
+        autoPlay:true
+    });
+});
+  $(document).ready(function(){
+    $("#testimonial-slider1").owlCarousel({
+        items:2,
+        itemsDesktop:[1000,2],
+        itemsDesktopSmall:[979,2],
+        itemsTablet:[768,2],
+        itemsMobile:[650,1],
+        pagination:false,
+        navigation:true,
+        navigationText:["",""],
+        autoPlay:true
+    });
+});
+  $(document).ready(function(){
+    $("#testimonial-slider2").owlCarousel({
+        items:3,
+        itemsDesktop:[1199,2],
+        itemsDesktopSmall:[979,2],
+        itemsTablet:[768,2],
+        itemsMobile:[600,1],
+        pagination:true,
+        navigation:false,
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:true
+    });
+});
+
+</script> 
+<script>
+	$(function () {
+  $("#datepicker").datepicker({ 
+        autoclose: true, 
+        todayHighlight: true
+  }).datepicker('update', new Date());
+});
+ 
+//   tabs------------------
+    $(".tabs-menu a").on("click", function (a) {
+        a.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var b = $(this).attr("href");
+        $(".tab-content").not(b).css("display", "none");
+        $(b).fadeIn();
+    });
+</script>
+
+</body>
+</html>
